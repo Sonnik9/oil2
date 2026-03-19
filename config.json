@@ -1,0 +1,9 @@
+{
+    "pos_side": "LONG",
+    "order_request_interval": 1,
+    "price_request_interval": 5,
+    "order_indentation_pct": 15,
+    "iteration_interval": 600,
+    "black_list": [
+    ]
+}
