@@ -38,38 +38,44 @@ class OpenInterestScreener:
     async def _update_prices_loop(self):
         """Фоновое обновление цен."""
         while self._running:
+            await asyncio.sleep(self.price_interval) # Сначала спим, так как при старте уже запросили
             if self.client:
                 try:
-                    # Запрос с учетом таймаутов внутри метода
-                    tickers = await self.client.get_all_tickers()
+                    tickers = await asyncio.wait_for(
+                        self.client.get_all_tickers(timeout_sec=10.0), 
+                        timeout=15.0
+                    )
                     if tickers:
                         self.prices = tickers
                 except asyncio.TimeoutError:
-                    self.log.warning("Таймаут при получении цен (get_all_tickers).")
+                    self.log.warning("Таймаут фонового обновления цен.")
                 except Exception as e:
-                    self.log.error(f"Failed to fetch prices: {e}")
-            await asyncio.sleep(self.price_interval)
+                    self.log.error(f"Failed to fetch prices in bg: {e}")
             
     async def start(self):
         self._running = True
         
-        # Общий глобальный таймаут коннекта для сессии
-        timeout = aiohttp.ClientTimeout(total=20, connect=10)
-        async with aiohttp.ClientSession(timeout=timeout) as session:
+        timeout = aiohttp.ClientTimeout(total=30, connect=10)
+        connector = aiohttp.TCPConnector(limit=50, ttl_dns_cache=300, enable_cleanup_closed=True)
+        
+        async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
             self.client = PhemexPrivateClient(self.api_key, self.api_secret, session)
-            self._price_task = asyncio.create_task(self._update_prices_loop())
             
-            self.log.info("Ожидание первичной загрузки цен (до 15 сек)...")
-            for _ in range(15):
-                if self.prices:
-                    break
-                await asyncio.sleep(1)
-                
-            if not self.prices:
-                self.log.error("Прайсы не загрузились! Прерываем запуск скринера.")
+            self.log.info("Запрашиваем стартовые цены одним прямым запросом...")
+            try:
+                self.prices = await self.client.get_all_tickers()
+            except Exception as e:
+                self.log.error(f"Фатальная ошибка при первичном получении цен: {e}")
                 return
                 
-            self.log.info(f"Успешно получены цены для {len(self.prices)} пар.")
+            if not self.prices:
+                self.log.error("Прайсы не загрузились (пустой ответ)! Прерываем скринер. Смотри консоль [DEBUG] для отладки.")
+                return
+                
+            self.log.info(f"Успешно получены стартовые цены для {len(self.prices)} пар.")
+            
+            # Запускаем фоновое обновление ТОЛЬКО после успешного старта
+            self._price_task = asyncio.create_task(self._update_prices_loop())
             
             while self._running:
                 self.log.info("--- Начинается новая итерация проверки Open Interest ---")

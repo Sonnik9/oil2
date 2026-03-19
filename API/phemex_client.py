@@ -35,7 +35,6 @@ class PhemexPrivateClient:
 
         url = f"{self.BASE_URL}{path}{query}"
         
-        # Добавляем локальный таймаут для конкретного запроса
         async with self.session.request(method, url, headers=headers, data=body_str if body else None, timeout=timeout_sec) as resp:
             text = await resp.text()
             try:
@@ -43,19 +42,70 @@ class PhemexPrivateClient:
             except json.JSONDecodeError:
                 raise RuntimeError(f"Bad response {resp.status}: {text}")
 
-    async def get_all_tickers(self, timeout_sec: float = 15.0) -> Dict[str, float]:
-        """Единый запрос для получения всех цен с таймаутом."""
-        url = f"{self.BASE_URL}/md/v2/ticker/24hr/all"
-        async with self.session.get(url, timeout=timeout_sec) as resp:
-            data = await resp.json()
-            res = {}
-            items = data.get("result", data.get("data", []))
-            for item in items:
-                sym = item.get("symbol")
-                price = item.get("lastPriceRp") or item.get("lastRp") or item.get("last")
-                if sym and price:
+    async def get_all_tickers(self, timeout_sec: float = 10.0) -> Dict[str, float]:
+        urls = [
+            f"{self.BASE_URL}/md/v2/ticker/24hr/all", 
+            f"{self.BASE_URL}/md/ticker/24hr/all"
+        ]
+        data = None
+        
+        for url in urls:
+            try:
+                async with self.session.get(url, timeout=timeout_sec) as resp:
+                    if resp.status == 200:
+                        data = await resp.json()
+                        if "result" in data or "data" in data:
+                            break
+            except Exception:
+                continue
+                
+        if not data:
+            print("[DEBUG] Все эндпоинты тикеров недоступны (Таймаут или 404).")
+            return {}
+
+        res = {}
+        items = data.get("result") or data.get("data")
+        
+        if isinstance(items, dict):
+            items_list = list(items.values())
+        elif isinstance(items, list):
+            items_list = items
+        else:
+            print(f"[DEBUG] Неизвестный формат поля result/data: {type(items)} | Сырой ответ: {str(data)[:300]}")
+            return {}
+
+        for item in items_list:
+            if not isinstance(item, dict):
+                continue
+            sym = item.get("symbol")
+            
+            # ДОБАВЛЕНО: closeRp и markPriceRp согласно свежему ответу Phemex
+            # price = (
+                # item.get("closeRp")
+                # item.get("markPriceRp") or 
+                # item.get("lastPriceRp") or 
+                # item.get("lastRp") or 
+                # item.get("markRp")
+            # )
+
+            price = item.get("closeRp")
+            
+            # if not price and "last" in item:
+            #     try:
+            #         price = float(item["last"]) / 10000.0
+            #     except (ValueError, TypeError):
+            #         price = None
+                    
+            if sym and price:
+                try:
                     res[sym] = float(price)
-            return res
+                except ValueError:
+                    pass
+                    
+        if not res:
+            print(f"[DEBUG] Парсинг цен не дал результатов! Символы не найдены. Сырой ответ (первые 500 символов): {str(data)[:500]}")
+            
+        return res
 
     async def place_order(self, symbol: str, side: str, qty: float, price: float, pos_side: str) -> Dict[str, Any]:
         from utils import float_to_str
