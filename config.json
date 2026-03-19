@@ -1,9 +1,10 @@
 {
+    "api_key": "094ade21-a721-4b34-b6c9-2c13a3aaa56f",
+    "api_secret": "jTOP6Z90qywJrFVmX-W5Q9XNaS2Lx34ujxJ9IlGMpkVjNmQ4YTc5ZS1lNTMzLTRjN2UtYTI0NC01NzJhMjUyMzBiNTk",
     "pos_side": "LONG",
     "order_request_interval": 1,
     "price_request_interval": 5,
     "order_indentation_pct": 15,
     "iteration_interval": 600,
-    "black_list": [
-    ]
+    "black_list": []
 }

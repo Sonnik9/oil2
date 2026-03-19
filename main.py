@@ -1,13 +1,39 @@
 import asyncio
-import time
 import json
-import re
 import os
-from typing import Any, Dict, Optional
-import aiohttp
+import signal
 
 from c_log import UnifiedLogger
-from API.symbols import PhemexSymbols
+from screener import OpenInterestScreener
 
+async def main():
+    logger = UnifiedLogger("oi_screener")
+    
+    config_path = "config.json"
+    if not os.path.exists(config_path):
+        logger.error(f"Config file {config_path} not found!")
+        return
 
-...
+    with open(config_path, "r", encoding="utf-8") as f:
+        config = json.load(f)
+        
+    screener = OpenInterestScreener(config, logger)
+    
+    # Graceful shutdown (корректное завершение по Ctrl+C)
+    loop = asyncio.get_running_loop()
+    for sig in (signal.SIGINT, signal.SIGTERM):
+        loop.add_signal_handler(sig, lambda: asyncio.create_task(screener.stop()))
+
+    try:
+        logger.info("Скринер запускается...")
+        await screener.start()
+    except asyncio.CancelledError:
+        logger.info("Исполнение скринера прервано.")
+    except Exception:
+        logger.exception("Фатальная ошибка в main лупе")
+
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        pass
