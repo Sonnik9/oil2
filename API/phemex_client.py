@@ -4,6 +4,7 @@ import hmac
 import hashlib
 from typing import Any, Dict, Optional
 import aiohttp
+import asyncio
 
 class PhemexPrivateClient:
     BASE_URL = "https://api.phemex.com"
@@ -21,7 +22,7 @@ class PhemexPrivateClient:
             hashlib.sha256
         ).hexdigest()
 
-    async def _request(self, method: str, path: str, query: str = "", body: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    async def _request(self, method: str, path: str, query: str = "", body: Optional[Dict[str, Any]] = None, timeout_sec: float = 10.0) -> Dict[str, Any]:
         expiry = int(time.time() + 60)
         body_str = json.dumps(body, separators=(',', ':')) if body else ""
         
@@ -34,17 +35,18 @@ class PhemexPrivateClient:
 
         url = f"{self.BASE_URL}{path}{query}"
         
-        async with self.session.request(method, url, headers=headers, data=body_str if body else None) as resp:
+        # Добавляем локальный таймаут для конкретного запроса
+        async with self.session.request(method, url, headers=headers, data=body_str if body else None, timeout=timeout_sec) as resp:
             text = await resp.text()
             try:
                 return json.loads(text)
             except json.JSONDecodeError:
                 raise RuntimeError(f"Bad response {resp.status}: {text}")
 
-    async def get_all_tickers(self) -> Dict[str, float]:
-        """Единый запрос для получения всех цен (V2 endpoint)."""
+    async def get_all_tickers(self, timeout_sec: float = 15.0) -> Dict[str, float]:
+        """Единый запрос для получения всех цен с таймаутом."""
         url = f"{self.BASE_URL}/md/v2/ticker/24hr/all"
-        async with self.session.get(url) as resp:
+        async with self.session.get(url, timeout=timeout_sec) as resp:
             data = await resp.json()
             res = {}
             items = data.get("result", data.get("data", []))
@@ -52,16 +54,10 @@ class PhemexPrivateClient:
                 sym = item.get("symbol")
                 price = item.get("lastPriceRp") or item.get("lastRp") or item.get("last")
                 if sym and price:
-                    # Если возвращается старый формат 'last', возможно потребуется деление на 10^4
-                    # Но lastPriceRp всегда отдает float-совместимую строку
                     res[sym] = float(price)
             return res
 
     async def place_order(self, symbol: str, side: str, qty: float, price: float, pos_side: str) -> Dict[str, Any]:
-        """
-        Выставляет лимитный ордер. 
-        side: "Buy" или "Sell", pos_side: "Long" или "Short"
-        """
         from utils import float_to_str
         
         body = {

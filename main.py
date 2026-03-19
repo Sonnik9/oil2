@@ -1,6 +1,7 @@
 import asyncio
 import json
 import os
+import sys
 import signal
 
 from c_log import UnifiedLogger
@@ -19,21 +20,26 @@ async def main():
         
     screener = OpenInterestScreener(config, logger)
     
-    # Graceful shutdown (корректное завершение по Ctrl+C)
+    # Кроссплатформенная обработка сигналов
+    # На Windows (win32) ProactorEventLoop не поддерживает add_signal_handler
     loop = asyncio.get_running_loop()
-    for sig in (signal.SIGINT, signal.SIGTERM):
-        loop.add_signal_handler(sig, lambda: asyncio.create_task(screener.stop()))
+    if sys.platform != "win32":
+        for sig in (signal.SIGINT, signal.SIGTERM):
+            loop.add_signal_handler(sig, lambda: asyncio.create_task(screener.stop()))
 
     try:
         logger.info("Скринер запускается...")
         await screener.start()
     except asyncio.CancelledError:
-        logger.info("Исполнение скринера прервано.")
+        logger.info("Получен сигнал отмены. Запускаем процедуру остановки...")
+        await screener.stop()
     except Exception:
         logger.exception("Фатальная ошибка в main лупе")
+        await screener.stop()
 
 if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        pass
+        # Глушим системный трейсбек при принудительном завершении (Ctrl+C)
+        print("\n[INFO] Процесс прерван пользователем (Ctrl+C). Graceful shutdown успешно завершен.")
