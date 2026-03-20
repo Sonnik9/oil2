@@ -118,5 +118,107 @@
         "timestamp": "2026-03-20T16:48:37.031251+02:00",
         "code": 11001,
         "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T17:25:59.181674+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T17:26:00.251504+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T17:26:01.301614+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ADAUSDT",
+        "timestamp": "2026-03-20T17:26:02.551406+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "SOLUSDT",
+        "timestamp": "2026-03-20T17:26:04.456398+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "UNIUSDT",
+        "timestamp": "2026-03-20T17:26:05.483621+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T17:42:23.884767+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T17:42:25.199591+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T17:42:26.478588+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ADAUSDT",
+        "timestamp": "2026-03-20T17:42:27.665988+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "SOLUSDT",
+        "timestamp": "2026-03-20T17:42:29.003120+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "UNIUSDT",
+        "timestamp": "2026-03-20T17:42:30.067328+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "DOTUSDT",
+        "timestamp": "2026-03-20T17:42:31.446483+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "LINKUSDT",
+        "timestamp": "2026-03-20T17:42:32.486372+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T17:59:28.672252+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T17:59:30.124673+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T17:59:31.325939+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
     }
 ]

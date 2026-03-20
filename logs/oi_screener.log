@@ -1,24 +1,14 @@
-2026-03-20 16:48:25 | INFO | oi_screener | Скринер запускается...
-2026-03-20 16:48:25 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
-2026-03-20 16:48:26 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
-2026-03-20 16:48:26 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
-2026-03-20 16:48:27 | INFO | oi_screener | Символов для проверки: 521
-2026-03-20 16:48:27 | DEBUG | oi_screener | [BTCUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:27 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:28 | DEBUG | oi_screener | [ETHUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:29 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:30 | DEBUG | oi_screener | [XRPUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:30 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:31 | DEBUG | oi_screener | [ADAUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:31 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:32 | DEBUG | oi_screener | [SOLUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:33 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:34 | DEBUG | oi_screener | [UNIUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:34 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:35 | DEBUG | oi_screener | [DOTUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:35 | WARNING | oi_screener | [DOTUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:36 | DEBUG | oi_screener | [LINKUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:37 | WARNING | oi_screener | [LINKUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
-2026-03-20 16:48:37 | DEBUG | oi_screener | [ATOMUSDT] Ответ на смену плеча: {'msg': 'API Signature verification failed.', 'code': 10500}
-2026-03-20 16:48:38 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
-2026-03-20 16:48:38 | INFO | oi_screener | Остановка скринера...
+2026-03-20 17:59:26 | INFO | oi_screener | Скринер запускается...
+2026-03-20 17:59:26 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 17:59:27 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 17:59:27 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 17:59:28 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 17:59:28 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 17:59:28 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 17:59:29 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 17:59:30 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 17:59:31 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 17:59:31 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 17:59:32 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 17:59:32 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 17:59:32 | INFO | oi_screener | Остановка скринера...

@@ -110,12 +110,13 @@ class PhemexPrivateClient:
     async def set_leverage(self, symbol: str, pos_side: str, leverage: int) -> Dict[str, Any]:
         """
         Устанавливает плечо.
-        leverage = 0 включает Cross Margin.
+        Для USDT (V2) контрактов Phemex строго ожидает параметр leverageEr 
+        (число, умноженное на 10^8) в теле JSON-запроса (body) вместе с posSide.
         """
         body = {
             "symbol": symbol,
             "posSide": pos_side,
-            "leverageRr": str(leverage)
+            "leverageEr": int(leverage * 100000000)
         }
         return await self._request("PUT", "/g-positions/leverage", body=body)
 

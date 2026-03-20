@@ -82,26 +82,35 @@ class OpenInterestScreener:
         qty = round_step(qty, lot_size)
         
         try:
-            # 1. Сначала задаем плечо и тип маржи (0 = Cross, >0 = Isolated)
+            # 1. Сначала задаем плечо
             target_leverage = 0 if self.margin_type == "CROSS" else self.leverage
             lev_resp = await self.client.set_leverage(symbol, phemex_pos_side, target_leverage)
             
-            # Если код не 0 и не 11084 (Leverage not modified), ругаемся, но продолжаем
+            # Логируем только реальные ошибки (11084 - это "Leverage not modified", всё ок)
             if lev_resp.get("code", -1) not in (0, 11084):
-                self.log.debug(f"[{symbol}] Ответ на смену плеча: {lev_resp}")
+                self.log.warning(f"[{symbol}] Не удалось сменить плечо: {lev_resp}")
 
             # 2. Постановка ордера
             resp = await self.client.place_order(symbol, side, qty, order_price, phemex_pos_side)
             code = resp.get("code", -1)
             
             if code == 0:
-                # 3. Отмена ордера, если постановка успешна
-                order_id = resp.get("data", {}).get("orderID")
-                self.log.info(f"[{symbol}] Успех (Плечо {target_leverage}x). Отменяем ордер...")
+                # УСПЕХ! Сразу логируем сырой ответ, чтобы видеть все детали
+                self.log.info(f"[{symbol}] ✅ ОРДЕР ВСТАЛ! Ответ: {resp}")
+                
+                # 3. Отмена ордера на этой же итерации
+                data_dict = resp.get("data") or {}
+                # Phemex иногда пишет orderID, а иногда orderId
+                order_id = data_dict.get("orderID") or data_dict.get("orderId")
+                
                 if order_id:
                     cancel_resp = await self.client.cancel_order(symbol, order_id)
-                    if cancel_resp.get("code", -1) != 0:
-                        self.log.error(f"[{symbol}] ОШИБКА ОТМЕНЫ! {cancel_resp}")
+                    if cancel_resp.get("code", -1) == 0:
+                        self.log.info(f"[{symbol}] 🗑️ Ордер {order_id} моментально отменен.")
+                    else:
+                        self.log.error(f"[{symbol}] ❌ ОШИБКА ОТМЕНЫ ОРДЕРА! {cancel_resp}")
+                else:
+                    self.log.error(f"[{symbol}] ❌ КРИТИЧЕСКИ: Не найден ID в ответе: {resp}")
             else:
                 msg = resp.get("msg", "")
                 self.log.warning(f"[{symbol}] Ошибка выставления: {code} - {msg}")
