@@ -1,13 +1,19 @@
 {
     "pos_side": "LONG",
+    "pos_mode": "hedged",
     "margin_type": "ISOLATED",
-    "leverage": 15,
-    "margin_amount": 1.5,
-    "order_request_interval": [0.5, 1.0],
+    "leverage": 5,
+    "margin_amount": 7,
+    "order_request_interval": [1.0, 2.0],
     "batches_sleep_interval": [5.0, 10.0],
     "sleep_every_n_symbols": [20, 40],
     "price_request_interval": 5,
-    "order_indentation_pct": 15,
-    "iteration_interval": 600,
-    "black_list": []
+    "order_indentation_pct": 25,
+    "iteration_interval": 3600,
+    "black_list": [],
+    "telegram": {
+        "enable": true,
+        "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+        "chat_id": "YOUR_TELEGRAM_CHAT_ID"
+    }
 }

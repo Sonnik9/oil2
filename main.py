@@ -34,3 +34,10 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("\n[INFO] Процесс прерван пользователем (Ctrl+C). Graceful shutdown успешно завершен.")
+
+
+# chmod 600 ssh_key.txt
+# eval "$(ssh-agent -s)"
+# ssh-add ssh_key.txt
+# ssh -T git@github.com
+# git log -1

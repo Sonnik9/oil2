@@ -1,80 +1,20 @@
 [
     {
-        "symbol": "BTCUSDT",
-        "timestamp": "2026-03-20T19:28:45.756874+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+        "symbol": "ILVUSDT",
+        "timestamp": "2026-03-20T21:09:35.302027+02:00",
+        "code": 11150,
+        "msg": "TE_OI_LIMIT_REDUCE_ONLY"
     },
     {
-        "symbol": "ETHUSDT",
-        "timestamp": "2026-03-20T19:28:47.056284+02:00",
-        "code": 20004,
-        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+        "symbol": "LSKUSDT",
+        "timestamp": "2026-03-20T21:10:42.674917+02:00",
+        "code": 11150,
+        "msg": "TE_OI_LIMIT_REDUCE_ONLY"
     },
     {
-        "symbol": "XRPUSDT",
-        "timestamp": "2026-03-20T19:28:48.492613+02:00",
-        "code": 20004,
-        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
-    },
-    {
-        "symbol": "ADAUSDT",
-        "timestamp": "2026-03-20T19:28:49.618512+02:00",
-        "code": 20004,
-        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
-    },
-    {
-        "symbol": "BTCUSDT",
-        "timestamp": "2026-03-20T19:31:27.254363+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "XRPUSDT",
-        "timestamp": "2026-03-20T19:31:30.210297+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "ADAUSDT",
-        "timestamp": "2026-03-20T19:31:31.245119+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "SOLUSDT",
-        "timestamp": "2026-03-20T19:31:32.370407+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "UNIUSDT",
-        "timestamp": "2026-03-20T19:31:33.429090+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "DOTUSDT",
-        "timestamp": "2026-03-20T19:31:34.456635+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "LINKUSDT",
-        "timestamp": "2026-03-20T19:31:35.924870+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "ATOMUSDT",
-        "timestamp": "2026-03-20T19:31:37.374948+02:00",
-        "code": 11001,
-        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
-    },
-    {
-        "symbol": "LTCUSDT",
-        "timestamp": "2026-03-20T19:31:38.745764+02:00",
-        "code": 20004,
-        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+        "symbol": "VANRYUSDT",
+        "timestamp": "2026-03-20T21:11:42.559821+02:00",
+        "code": 11150,
+        "msg": "TE_OI_LIMIT_REDUCE_ONLY"
     }
 ]

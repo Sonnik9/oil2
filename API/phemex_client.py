@@ -107,7 +107,7 @@ class PhemexPrivateClient:
         # Для ордера query пустой, данные идут в теле
         return await self._request("POST", "/g-orders", body=body)
 
-    async def cancel_order(self, symbol: str, order_id: str) -> Dict[str, Any]:
-        # Для отмены параметры идут в query БЕЗ '?'
-        query_no_q = f"orderID={order_id}&symbol={symbol}"
+    async def cancel_order(self, symbol: str, order_id: str, pos_side: str) -> Dict[str, Any]:
+        # В Hedge режиме биржа строго требует передавать posSide при отмене
+        query_no_q = f"orderID={order_id}&posSide={pos_side}&symbol={symbol}"
         return await self._request("DELETE", "/g-orders/cancel", query_no_q=query_no_q)

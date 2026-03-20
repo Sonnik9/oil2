@@ -12,6 +12,7 @@ from API.phemex_client import PhemexPrivateClient
 from c_log import UnifiedLogger
 from consts import TIME_ZONE
 from utils import round_step, async_append_to_json
+from tg_sender import TelegramSender
 
 from dotenv import load_dotenv
 
@@ -27,6 +28,7 @@ class OpenInterestScreener:
         self.log = logger
         
         self.pos_side = self.config.get("pos_side", "LONG").upper()
+        self.pos_mode = self.config.get("pos_mode", "hedged").lower() # "hedged" или "merged" 
         
         # Новые маржинальные настройки
         self.margin_type = self.config.get("margin_type", "ISOLATED").upper()
@@ -43,14 +45,20 @@ class OpenInterestScreener:
         
         self.api_key = os.getenv("api_key") or ""
         self.api_secret = os.getenv("api_secret") or ""
-        
+
+        self.bot_token = os.getenv("bot_token") or self.config.get("telegram", {}).get("bot_token", "") or ""
+        self.chat_id = os.getenv("chat_id") or self.config.get("telegram", {}).get("chat_id", "") or ""
+        self.telegram_enable = self.config.get("telegram", {}).get("enable", False)
+
         self.prices: Dict[str, float] = {}
         self.symbols_api = PhemexSymbols()
         self.client: Optional[PhemexPrivateClient] = None
         self._running = False
         self._price_task: Optional[asyncio.Task] = None
 
-    async def _process_symbol(self, sym_info):
+        self.leverage_set_cache = set()  # Кэш для хранения уже установленного плеча по символу
+
+    async def _process_symbol(self, sym_info, tg_bot: Optional[TelegramSender]):
         symbol = sym_info.symbol
         price = self.prices.get(symbol)
         
@@ -83,12 +91,13 @@ class OpenInterestScreener:
         
         try:
             # 1. Сначала задаем плечо
-            target_leverage = 0 if self.margin_type == "CROSS" else self.leverage
-            lev_resp = await self.client.set_leverage(symbol, phemex_pos_side, target_leverage)
-            
-            # Логируем только реальные ошибки (11084 - это "Leverage not modified", всё ок)
-            if lev_resp.get("code", -1) not in (0, 11084):
-                self.log.warning(f"[{symbol}] Не удалось сменить плечо: {lev_resp}")
+            if symbol not in self.leverage_set_cache:
+                lev_resp = await self.client.set_leverage(symbol, phemex_pos_side, self.leverage, mode=self.pos_mode)
+                self.leverage_set_cache.add(symbol)
+
+                # Логируем только реальные ошибки (11084 - это "Leverage not modified", всё ок)
+                if lev_resp.get("code", -1) not in (0, 11084):
+                    self.log.warning(f"[{symbol}] Не удалось сменить плечо: {lev_resp}")
 
             # 2. Постановка ордера
             resp = await self.client.place_order(symbol, side, qty, order_price, phemex_pos_side)
@@ -96,7 +105,7 @@ class OpenInterestScreener:
             
             if code == 0:
                 # УСПЕХ! Сразу логируем сырой ответ, чтобы видеть все детали
-                self.log.info(f"[{symbol}] ✅ ОРДЕР ВСТАЛ! Ответ: {resp}")
+                # self.log.info(f"[{symbol}] ✅ ОРДЕР ВСТАЛ! Ответ: {resp}")
                 
                 # 3. Отмена ордера на этой же итерации
                 data_dict = resp.get("data") or {}
@@ -104,17 +113,26 @@ class OpenInterestScreener:
                 order_id = data_dict.get("orderID") or data_dict.get("orderId")
                 
                 if order_id:
-                    cancel_resp = await self.client.cancel_order(symbol, order_id)
+                    # ДОБАВИЛИ phemex_pos_side третьим аргументом
+                    cancel_resp = await self.client.cancel_order(symbol, order_id, phemex_pos_side)
                     if cancel_resp.get("code", -1) == 0:
                         self.log.info(f"[{symbol}] 🗑️ Ордер {order_id} моментально отменен.")
                     else:
                         self.log.error(f"[{symbol}] ❌ ОШИБКА ОТМЕНЫ ОРДЕРА! {cancel_resp}")
-                else:
-                    self.log.error(f"[{symbol}] ❌ КРИТИЧЕСКИ: Не найден ID в ответе: {resp}")
+
+            elif code == 11150:               
+                # Максимально спартанский пуш в Telegram
+                if tg_bot and self.telegram_enable:
+                    await tg_bot.send_message(f"#{symbol}")
+                    self.log.info(f"[{symbol}] 🚀 Символ отправлен в Telegram.")
+
+                msg = resp.get("msg", "")
+                self.log.warning(f"[{symbol}] Ошибка выставления: {code} - {msg}")
+                await self._save_error(symbol, code, msg)  
+                
             else:
                 msg = resp.get("msg", "")
                 self.log.warning(f"[{symbol}] Ошибка выставления: {code} - {msg}")
-                await self._save_error(symbol, code, msg)
                 
         except asyncio.TimeoutError:
             self.log.warning(f"[{symbol}] Таймаут ожидания ответа от биржи!")
@@ -144,6 +162,7 @@ class OpenInterestScreener:
         
         timeout = aiohttp.ClientTimeout(total=30, connect=10)
         connector = aiohttp.TCPConnector(limit=50, ttl_dns_cache=300, enable_cleanup_closed=True)
+        tg_bot = TelegramSender(self.bot_token, self.chat_id) if self.telegram_enable else None
         
         async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
             self.client = PhemexPrivateClient(self.api_key, self.api_secret, session)
@@ -183,7 +202,7 @@ class OpenInterestScreener:
                     if not self._running:
                         break
                         
-                    await self._process_symbol(sym_info)
+                    await self._process_symbol(sym_info, tg_bot)
 
                     # Логика сна
                     if num == next_sleep_target:

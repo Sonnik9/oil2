@@ -51,6 +51,7 @@
 |--------|-----|----------|
 | api_key | string | API ключ |
 | api_secret | string | API секрет |
+| pos_mode | string | hedged / merged |
 | pos_side | string | LONG / SHORT |
 | margin_type | string | ISOLATED / CROSS |
 | leverage | number | Плечо |
