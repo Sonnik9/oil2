@@ -81,3 +81,111 @@
 2026-03-20 18:13:21 | WARNING | oi_screener | [ENJUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
 2026-03-20 18:13:21 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
 2026-03-20 18:13:21 | INFO | oi_screener | Остановка скринера...
+2026-03-20 18:36:52 | INFO | oi_screener | Скринер запускается...
+2026-03-20 18:36:52 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 18:36:53 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 18:36:53 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 18:36:54 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 18:36:55 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:36:55 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:36:56 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:36:56 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:36:58 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:36:58 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:37:00 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:37:00 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:37:02 | WARNING | oi_screener | [SOLUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:37:02 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 18:37:02 | INFO | oi_screener | Остановка скринера...
+2026-03-20 18:37:21 | INFO | oi_screener | Скринер запускается...
+2026-03-20 18:37:21 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 18:37:22 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 18:37:22 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 18:37:22 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 18:37:23 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:37:23 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:37:25 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:37:25 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:37:26 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:37:27 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:37:28 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:37:28 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:37:30 | WARNING | oi_screener | [SOLUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:37:30 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:37:30 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 18:37:30 | INFO | oi_screener | Остановка скринера...
+2026-03-20 18:39:03 | INFO | oi_screener | Скринер запускается...
+2026-03-20 18:39:03 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 18:39:04 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 18:39:04 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 18:39:04 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 18:39:07 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:07 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:39:11 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:11 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:15 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:15 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:18 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:19 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:22 | WARNING | oi_screener | [SOLUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:23 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:26 | WARNING | oi_screener | [UNIUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:26 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:30 | WARNING | oi_screener | [DOTUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:30 | WARNING | oi_screener | [DOTUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:33 | WARNING | oi_screener | [LINKUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:34 | WARNING | oi_screener | [LINKUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:37 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 18:39:37 | INFO | oi_screener | Остановка скринера...
+2026-03-20 18:39:46 | INFO | oi_screener | Скринер запускается...
+2026-03-20 18:39:46 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 18:39:47 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 18:39:47 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 18:39:47 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 18:39:50 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:51 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:54 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:54 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:39:58 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:39:58 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:02 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 18:40:02 | INFO | oi_screener | Остановка скринера...
+2026-03-20 18:40:36 | INFO | oi_screener | Скринер запускается...
+2026-03-20 18:40:36 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 18:40:37 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 18:40:37 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 18:40:38 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 18:40:38 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:38 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:40:39 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:40 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:41 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:41 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:42 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:42 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:43 | WARNING | oi_screener | [SOLUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:44 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:44 | WARNING | oi_screener | [UNIUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:45 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:46 | WARNING | oi_screener | [DOTUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:46 | WARNING | oi_screener | [DOTUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:47 | WARNING | oi_screener | [LINKUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:47 | WARNING | oi_screener | [LINKUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:48 | WARNING | oi_screener | [ATOMUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:49 | WARNING | oi_screener | [ATOMUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:49 | WARNING | oi_screener | [LTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:50 | WARNING | oi_screener | [LTCUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:51 | WARNING | oi_screener | [DOGEUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:51 | WARNING | oi_screener | [DOGEUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:52 | WARNING | oi_screener | [HOOKUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:52 | WARNING | oi_screener | [HOOKUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:53 | WARNING | oi_screener | [TWTUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:53 | WARNING | oi_screener | [TWTUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:55 | WARNING | oi_screener | [BNBUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:55 | WARNING | oi_screener | [BNBUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:56 | WARNING | oi_screener | [MANAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:56 | WARNING | oi_screener | [MANAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:57 | WARNING | oi_screener | [APEUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:40:58 | WARNING | oi_screener | [APEUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 18:40:58 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 18:40:58 | INFO | oi_screener | Остановка скринера...

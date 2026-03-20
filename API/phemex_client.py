@@ -107,52 +107,80 @@ class PhemexPrivateClient:
             
         return res
     
-    # async def set_leverage(self, symbol: str, pos_side: str, leverage: int) -> Dict[str, Any]:
-    #     """
-    #     Устанавливает плечо.
-    #     Для USDT (V2) контрактов Phemex строго ожидает параметр leverageEr 
-    #     (число, умноженное на 10^8) в теле JSON-запроса (body) вместе с posSide.
-    #     """
-    #     body = {
-    #         "symbol": symbol,
-    #         "posSide": pos_side,
-    #         "leverageEr": int(leverage * 100000000)
-    #     }
-    #     return await self._request("PUT", "/g-positions/leverage", body=body)
-
     async def set_leverage(self, symbol: str, pos_side: str, leverage: int) -> Dict[str, Any]:
         """
-        Устанавливает плечо и системно переводит монету в нужный Hedge Mode.
+        Устанавливает плечо.
+        Для USDT (V2) контрактов Phemex строго ожидает параметр leverageEr 
+        (число, умноженное на 10^8) в теле JSON-запроса (body) вместе с posSide.
         """
-        lev_str = str(leverage)
-        
-        # Бот работает с posSide = "Long" / "Short", что является признаком Hedge Mode.
-        # В этом режиме биржа требует передавать плечо для обеих сторон строго в теле запроса (body).
         body = {
             "symbol": symbol,
-            "longLeverageRr": lev_str,
-            "shortLeverageRr": lev_str
+            "posSide": pos_side,
+            "leverageEr": int(leverage * 100000000)
         }
+        return await self._request("PUT", "/g-positions/leverage", body=body)
+
+    # async def set_leverage(self, symbol: str, pos_side: str, leverage: int) -> Dict[str, Any]:
+    #     """
+    #     Умная, самоадаптирующаяся установка плеча.
+    #     Перебирает все исторические и актуальные форматы Phemex API (числа/строки, 
+    #     Rr/Er, Hedge/One-Way), пока не найдет тот, на котором совпадет подпись (HMAC).
+    #     """
+    #     lev_str = str(leverage)
+    #     lev_er = int(leverage * 100000000)
         
-        # Делаем запрос на смену плеча
-        resp = await self._request("PUT", "/g-positions/leverage", body=body)
+    #     # Полный арсенал возможных форматов. 
+    #     # Кортеж: (body_json, query_string)
+    #     payloads = [
+    #         # 0-1: Стандарт библиотеки CCXT (передача плеча как int)
+    #         ({"symbol": symbol, "leverageRr": leverage}, ""),
+    #         ({"symbol": symbol, "longLeverageRr": leverage, "shortLeverageRr": leverage}, ""),
+            
+    #         # 2-3: Формат V2 Phemex (передача плеча как string)
+    #         ({"symbol": symbol, "leverageRr": lev_str}, ""),
+    #         ({"symbol": symbol, "longLeverageRr": lev_str, "shortLeverageRr": lev_str}, ""),
+            
+    #         # 4-5: С явным указанием posSide
+    #         ({"symbol": symbol, "posSide": pos_side, "leverageRr": leverage}, ""),
+    #         ({"symbol": symbol, "posSide": pos_side, "longLeverageRr": leverage, "shortLeverageRr": leverage}, ""),
+            
+    #         # 6-7: Старый формат V1 (Er)
+    #         ({"symbol": symbol, "leverageEr": lev_er}, ""),
+    #         ({"symbol": symbol, "longLeverageEr": lev_er, "shortLeverageEr": lev_er}, ""),
+            
+    #         # 8-9: Крайний случай - параметры в URL, а не в теле
+    #         (None, f"?leverageRr={leverage}&symbol={symbol}"),
+    #         (None, f"?longLeverageRr={leverage}&shortLeverageRr={leverage}&symbol={symbol}")
+    #     ]
         
-        # Код 10500 возникает, если монета находится в One-Way Mode.
-        # Биржа не воспринимает параметры long/shortLeverageRr, молча удаляет их 
-        # из нашего запроса, из-за чего подпись ломается.
-        if resp.get("code") == 10500:
-            print(10500)
-            # Системный принудительный перевод монеты в двусторонний режим (Hedge Mode)
-            switch_body = {
-                "symbol": symbol,
-                "targetPosMode": "Hedge"
-            }
-            await self._request("PUT", "/g-positions/switch-pos-mode-sync", body=switch_body)
+    #     # Инициализируем кэш рабочего формата
+    #     if not hasattr(self, '_working_lev_idx'):
+    #         self._working_lev_idx = 0
             
-            # После успешного переключения повторяем установку плеча
-            resp = await self._request("PUT", "/g-positions/leverage", body=body)
+    #     # Сдвигаем массив так, чтобы начинать проверку с последнего удачного формата
+    #     ordered = payloads[self._working_lev_idx:] + payloads[:self._working_lev_idx]
+        
+    #     last_resp = {}
+    #     for item in ordered:
+    #         body, query = item
+    #         resp = await self._request("PUT", "/g-positions/leverage", query=query or "", body=body)
+    #         code = resp.get("code", -1)
+    #         last_resp = resp
             
-        return resp
+    #         # 10500: Ошибка подписи (Gateway отбросил наши ключи)
+    #         # 20004: Подпись ВЕРНАЯ, но не совпал режим One-Way/Hedge
+    #         if code not in (10500, 20004):
+    #             original_idx = payloads.index(item)
+                
+    #             # При первой удачной находке сообщаем в консоль
+    #             if getattr(self, '_working_lev_idx', -1) != original_idx:
+    #                 print(f"[DEBUG] ✅ Phemex принял формат плеча (индекс {original_idx}). Адаптация успешна!")
+                    
+    #             # Запоминаем индекс, чтобы следующие монеты пробивались с первой попытки
+    #             self._working_lev_idx = original_idx
+    #             return resp
+                
+    #     return last_resp
 
     async def place_order(self, symbol: str, side: str, qty: float, price: float, pos_side: str) -> Dict[str, Any]:
         from utils import float_to_str

@@ -382,5 +382,221 @@
         "timestamp": "2026-03-20T18:13:21.311612+02:00",
         "code": 11001,
         "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T18:36:55.294503+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T18:36:56.941692+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T18:36:58.687352+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "ADAUSDT",
+        "timestamp": "2026-03-20T18:37:00.628777+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T18:37:23.746619+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T18:37:25.546085+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T18:37:27.028927+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "ADAUSDT",
+        "timestamp": "2026-03-20T18:37:28.887997+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "SOLUSDT",
+        "timestamp": "2026-03-20T18:37:30.740512+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T18:39:07.789213+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T18:39:11.652008+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T18:39:15.474064+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "ADAUSDT",
+        "timestamp": "2026-03-20T18:39:19.263763+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "SOLUSDT",
+        "timestamp": "2026-03-20T18:39:23.076660+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "UNIUSDT",
+        "timestamp": "2026-03-20T18:39:26.627346+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "DOTUSDT",
+        "timestamp": "2026-03-20T18:39:30.241269+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "LINKUSDT",
+        "timestamp": "2026-03-20T18:39:34.019569+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T18:39:51.079846+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T18:39:54.703960+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T18:39:58.636498+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T18:40:38.595762+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T18:40:40.146493+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T18:40:41.310564+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "ADAUSDT",
+        "timestamp": "2026-03-20T18:40:42.742762+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "SOLUSDT",
+        "timestamp": "2026-03-20T18:40:44.234540+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "UNIUSDT",
+        "timestamp": "2026-03-20T18:40:45.217016+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "DOTUSDT",
+        "timestamp": "2026-03-20T18:40:46.305322+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "LINKUSDT",
+        "timestamp": "2026-03-20T18:40:47.664525+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "ATOMUSDT",
+        "timestamp": "2026-03-20T18:40:49.160825+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "LTCUSDT",
+        "timestamp": "2026-03-20T18:40:50.221387+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "DOGEUSDT",
+        "timestamp": "2026-03-20T18:40:51.300974+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "HOOKUSDT",
+        "timestamp": "2026-03-20T18:40:52.622869+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "TWTUSDT",
+        "timestamp": "2026-03-20T18:40:53.952327+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "BNBUSDT",
+        "timestamp": "2026-03-20T18:40:55.430097+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "MANAUSDT",
+        "timestamp": "2026-03-20T18:40:56.937393+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
+    },
+    {
+        "symbol": "APEUSDT",
+        "timestamp": "2026-03-20T18:40:58.058280+02:00",
+        "code": 20004,
+        "msg": "TE_ERR_INCONSISTENT_POS_MODE"
     }
 ]
