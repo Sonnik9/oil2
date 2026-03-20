@@ -12,3 +12,72 @@
 2026-03-20 17:59:32 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
 2026-03-20 17:59:32 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
 2026-03-20 17:59:32 | INFO | oi_screener | Остановка скринера...
+2026-03-20 18:07:59 | INFO | oi_screener | Скринер запускается...
+2026-03-20 18:07:59 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 18:08:00 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 18:08:00 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 18:08:01 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 18:08:02 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:08:02 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:08:05 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:08:05 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:08:05 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 18:08:05 | INFO | oi_screener | Остановка скринера...
+2026-03-20 18:12:29 | INFO | oi_screener | Скринер запускается...
+2026-03-20 18:12:29 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 18:12:31 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 18:12:31 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 18:12:32 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 18:12:32 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:32 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:34 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:34 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:36 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:36 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:38 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:38 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:40 | WARNING | oi_screener | [SOLUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:40 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:42 | WARNING | oi_screener | [UNIUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:42 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:43 | WARNING | oi_screener | [DOTUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:43 | WARNING | oi_screener | [DOTUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:45 | WARNING | oi_screener | [LINKUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:45 | WARNING | oi_screener | [LINKUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:47 | WARNING | oi_screener | [ATOMUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:47 | WARNING | oi_screener | [ATOMUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:49 | WARNING | oi_screener | [LTCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:49 | WARNING | oi_screener | [LTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:50 | WARNING | oi_screener | [DOGEUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:50 | WARNING | oi_screener | [DOGEUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:52 | WARNING | oi_screener | [HOOKUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:52 | WARNING | oi_screener | [HOOKUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:53 | WARNING | oi_screener | [TWTUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:53 | WARNING | oi_screener | [TWTUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:55 | WARNING | oi_screener | [BNBUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:55 | WARNING | oi_screener | [BNBUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:57 | WARNING | oi_screener | [MANAUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:57 | WARNING | oi_screener | [MANAUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:12:59 | WARNING | oi_screener | [APEUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:12:59 | WARNING | oi_screener | [APEUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:01 | WARNING | oi_screener | [LUNCUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:01 | WARNING | oi_screener | [LUNCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:02 | WARNING | oi_screener | [FLOWUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:03 | WARNING | oi_screener | [FLOWUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:04 | WARNING | oi_screener | [NEOUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:04 | WARNING | oi_screener | [NEOUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:06 | WARNING | oi_screener | [ACHUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:06 | WARNING | oi_screener | [ACHUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:08 | WARNING | oi_screener | [BANDUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:08 | WARNING | oi_screener | [BANDUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:09 | WARNING | oi_screener | [VETUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:10 | WARNING | oi_screener | [VETUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:10 | DEBUG | oi_screener | Достигнут лимит батча (22 симв.). Длинная пауза: 6.65 сек.
+2026-03-20 18:13:17 | WARNING | oi_screener | [API3USDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:17 | WARNING | oi_screener | [API3USDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:19 | WARNING | oi_screener | [SUSHIUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:19 | WARNING | oi_screener | [SUSHIUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:21 | WARNING | oi_screener | [ENJUSDT] Не удалось сменить плечо: {'msg': 'API Signature verification failed.', 'code': 10500}
+2026-03-20 18:13:21 | WARNING | oi_screener | [ENJUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 18:13:21 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 18:13:21 | INFO | oi_screener | Остановка скринера...

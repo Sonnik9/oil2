@@ -107,18 +107,52 @@ class PhemexPrivateClient:
             
         return res
     
+    # async def set_leverage(self, symbol: str, pos_side: str, leverage: int) -> Dict[str, Any]:
+    #     """
+    #     Устанавливает плечо.
+    #     Для USDT (V2) контрактов Phemex строго ожидает параметр leverageEr 
+    #     (число, умноженное на 10^8) в теле JSON-запроса (body) вместе с posSide.
+    #     """
+    #     body = {
+    #         "symbol": symbol,
+    #         "posSide": pos_side,
+    #         "leverageEr": int(leverage * 100000000)
+    #     }
+    #     return await self._request("PUT", "/g-positions/leverage", body=body)
+
     async def set_leverage(self, symbol: str, pos_side: str, leverage: int) -> Dict[str, Any]:
         """
-        Устанавливает плечо.
-        Для USDT (V2) контрактов Phemex строго ожидает параметр leverageEr 
-        (число, умноженное на 10^8) в теле JSON-запроса (body) вместе с posSide.
+        Устанавливает плечо и системно переводит монету в нужный Hedge Mode.
         """
+        lev_str = str(leverage)
+        
+        # Бот работает с posSide = "Long" / "Short", что является признаком Hedge Mode.
+        # В этом режиме биржа требует передавать плечо для обеих сторон строго в теле запроса (body).
         body = {
             "symbol": symbol,
-            "posSide": pos_side,
-            "leverageEr": int(leverage * 100000000)
+            "longLeverageRr": lev_str,
+            "shortLeverageRr": lev_str
         }
-        return await self._request("PUT", "/g-positions/leverage", body=body)
+        
+        # Делаем запрос на смену плеча
+        resp = await self._request("PUT", "/g-positions/leverage", body=body)
+        
+        # Код 10500 возникает, если монета находится в One-Way Mode.
+        # Биржа не воспринимает параметры long/shortLeverageRr, молча удаляет их 
+        # из нашего запроса, из-за чего подпись ломается.
+        if resp.get("code") == 10500:
+            print(10500)
+            # Системный принудительный перевод монеты в двусторонний режим (Hedge Mode)
+            switch_body = {
+                "symbol": symbol,
+                "targetPosMode": "Hedge"
+            }
+            await self._request("PUT", "/g-positions/switch-pos-mode-sync", body=switch_body)
+            
+            # После успешного переключения повторяем установку плеча
+            resp = await self._request("PUT", "/g-positions/leverage", body=body)
+            
+        return resp
 
     async def place_order(self, symbol: str, side: str, qty: float, price: float, pos_side: str) -> Dict[str, Any]:
         from utils import float_to_str

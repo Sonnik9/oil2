@@ -220,5 +220,167 @@
         "timestamp": "2026-03-20T17:59:31.325939+02:00",
         "code": 11001,
         "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T18:08:02.817239+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T18:08:05.388616+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "timestamp": "2026-03-20T18:12:32.952284+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "timestamp": "2026-03-20T18:12:34.726788+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "XRPUSDT",
+        "timestamp": "2026-03-20T18:12:36.541174+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ADAUSDT",
+        "timestamp": "2026-03-20T18:12:38.434001+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "SOLUSDT",
+        "timestamp": "2026-03-20T18:12:40.373143+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "UNIUSDT",
+        "timestamp": "2026-03-20T18:12:42.242774+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "DOTUSDT",
+        "timestamp": "2026-03-20T18:12:43.997081+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "LINKUSDT",
+        "timestamp": "2026-03-20T18:12:45.912409+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ATOMUSDT",
+        "timestamp": "2026-03-20T18:12:47.399866+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "LTCUSDT",
+        "timestamp": "2026-03-20T18:12:49.332345+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "DOGEUSDT",
+        "timestamp": "2026-03-20T18:12:50.908132+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "HOOKUSDT",
+        "timestamp": "2026-03-20T18:12:52.502722+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "TWTUSDT",
+        "timestamp": "2026-03-20T18:12:53.994736+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BNBUSDT",
+        "timestamp": "2026-03-20T18:12:55.572857+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "MANAUSDT",
+        "timestamp": "2026-03-20T18:12:57.964241+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "APEUSDT",
+        "timestamp": "2026-03-20T18:12:59.568036+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "LUNCUSDT",
+        "timestamp": "2026-03-20T18:13:01.473027+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "FLOWUSDT",
+        "timestamp": "2026-03-20T18:13:03.067619+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "NEOUSDT",
+        "timestamp": "2026-03-20T18:13:04.608235+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ACHUSDT",
+        "timestamp": "2026-03-20T18:13:06.782471+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "BANDUSDT",
+        "timestamp": "2026-03-20T18:13:08.494990+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "VETUSDT",
+        "timestamp": "2026-03-20T18:13:10.264219+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "API3USDT",
+        "timestamp": "2026-03-20T18:13:17.921406+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "SUSHIUSDT",
+        "timestamp": "2026-03-20T18:13:19.617707+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
+    },
+    {
+        "symbol": "ENJUSDT",
+        "timestamp": "2026-03-20T18:13:21.311612+02:00",
+        "code": 11001,
+        "msg": "TE_NO_ENOUGH_AVAILABLE_BALANCE"
     }
 ]
