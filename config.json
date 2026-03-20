@@ -1,8 +1,8 @@
 {
     "pos_side": "LONG",
     "margin_type": "ISOLATED",
-    "leverage": 30,
-    "margin_amount": 1.0,
+    "leverage": 15,
+    "margin_amount": 1.5,
     "order_request_interval": [0.5, 1.0],
     "batches_sleep_interval": [5.0, 10.0],
     "sleep_every_n_symbols": [20, 40],

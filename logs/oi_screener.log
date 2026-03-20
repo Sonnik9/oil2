@@ -189,3 +189,113 @@
 2026-03-20 18:40:58 | WARNING | oi_screener | [APEUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
 2026-03-20 18:40:58 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
 2026-03-20 18:40:58 | INFO | oi_screener | Остановка скринера...
+2026-03-20 19:07:59 | INFO | oi_screener | Скринер запускается...
+2026-03-20 19:07:59 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 19:08:00 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 19:08:00 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 19:08:01 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 19:08:02 | WARNING | oi_screener | [BTCUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:02 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:03 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:03 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:05 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:05 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:05 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 19:08:05 | INFO | oi_screener | Остановка скринера...
+2026-03-20 19:08:16 | INFO | oi_screener | Скринер запускается...
+2026-03-20 19:08:16 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 19:08:17 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 19:08:17 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 19:08:17 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 19:08:17 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:08:18 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:19 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:19 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:20 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:21 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:21 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:22 | WARNING | oi_screener | [SOLUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:22 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:23 | WARNING | oi_screener | [UNIUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:08:24 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:08:24 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 19:08:24 | INFO | oi_screener | Остановка скринера...
+2026-03-20 19:09:32 | INFO | oi_screener | Скринер запускается...
+2026-03-20 19:09:32 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 19:09:33 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 19:09:33 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 19:09:33 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 19:09:34 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:09:35 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:09:35 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:09:36 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:09:36 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:09:37 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:09:38 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:09:39 | WARNING | oi_screener | [SOLUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:09:39 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:09:40 | WARNING | oi_screener | [UNIUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:09:40 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:09:41 | WARNING | oi_screener | [DOTUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:09:42 | WARNING | oi_screener | [DOTUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:09:43 | WARNING | oi_screener | [LINKUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:09:43 | WARNING | oi_screener | [LINKUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:09:44 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 19:09:44 | INFO | oi_screener | Остановка скринера...
+2026-03-20 19:18:22 | INFO | oi_screener | Скринер запускается...
+2026-03-20 19:18:22 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 19:18:24 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 19:18:24 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 19:18:24 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 19:18:25 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:18:26 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:28 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:30 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:31 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:33 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:35 | WARNING | oi_screener | [DOTUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:37 | WARNING | oi_screener | [LINKUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:39 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 19:18:39 | INFO | oi_screener | Остановка скринера...
+2026-03-20 19:18:40 | INFO | oi_screener | Скринер запускается...
+2026-03-20 19:18:40 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 19:18:40 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 19:18:40 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 19:18:40 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 19:18:41 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:18:43 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 39999 - Error in place order
+2026-03-20 19:18:43 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 19:18:43 | INFO | oi_screener | Остановка скринера...
+2026-03-20 19:28:43 | INFO | oi_screener | Скринер запускается...
+2026-03-20 19:28:43 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 19:28:45 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 19:28:45 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 19:28:45 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 19:28:45 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:28:46 | WARNING | oi_screener | [ETHUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:28:47 | WARNING | oi_screener | [ETHUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:28:48 | WARNING | oi_screener | [XRPUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:28:48 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:28:49 | WARNING | oi_screener | [ADAUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:28:49 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:28:50 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 19:28:50 | INFO | oi_screener | Остановка скринера...
+2026-03-20 19:31:24 | INFO | oi_screener | Скринер запускается...
+2026-03-20 19:31:24 | INFO | oi_screener | Запрашиваем стартовые цены одним прямым запросом...
+2026-03-20 19:31:26 | INFO | oi_screener | Успешно получены стартовые цены для 532 пар.
+2026-03-20 19:31:26 | INFO | oi_screener | --- Начинается новая итерация проверки Open Interest ---
+2026-03-20 19:31:26 | INFO | oi_screener | Символов для проверки: 521
+2026-03-20 19:31:27 | WARNING | oi_screener | [BTCUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:28 | INFO | oi_screener | [ETHUSDT] ✅ ОРДЕР ВСТАЛ! Ответ: {'code': 0, 'msg': '', 'data': {'bizError': 0, 'orderID': 'b73fba0c-9437-48cd-960f-58ff8ddef9fb', 'clOrdID': '', 'symbol': 'ETHUSDT', 'side': 'Buy', 'actionTimeNs': 1774027888339602486, 'transactTimeNs': 1774027888339602486, 'orderType': 'Limit', 'priceRp': '1810.09', 'orderQtyRq': '0.01', 'displayQtyRq': '0', 'timeInForce': 'GoodTillCancel', 'closedPnlRv': '0', 'closedSizeRq': '0', 'cumQtyRq': '0', 'cumValueRv': '0', 'leavesQtyRq': '0.01', 'leavesValueRv': '18.1009', 'stopDirection': 'UNSPECIFIED', 'stopPxRp': '0', 'trigger': 'UNSPECIFIED', 'pegOffsetValueRp': '0', 'pegOffsetProportionRr': '0', 'execStatus': 'PendingNew', 'pegPriceType': 'UNSPECIFIED', 'ordStatus': 'Created', 'execInst': 'None', 'takeProfitRp': '0', 'stopLossRp': '0', 'slPxRp': '0', 'tpPxRp': '0'}}
+2026-03-20 19:31:28 | ERROR | oi_screener | [ETHUSDT] ❌ ОШИБКА ОТМЕНЫ ОРДЕРА! {'msg': "Missing required parameter,Required query parameter 'posSide' is not present.", 'code': 10500}
+2026-03-20 19:31:30 | WARNING | oi_screener | [XRPUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:31 | WARNING | oi_screener | [ADAUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:32 | WARNING | oi_screener | [SOLUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:33 | WARNING | oi_screener | [UNIUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:34 | WARNING | oi_screener | [DOTUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:35 | WARNING | oi_screener | [LINKUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:37 | WARNING | oi_screener | [ATOMUSDT] Ошибка выставления: 11001 - TE_NO_ENOUGH_AVAILABLE_BALANCE
+2026-03-20 19:31:38 | WARNING | oi_screener | [LTCUSDT] Не удалось сменить плечо: {'code': 20004, 'msg': 'TE_ERR_INCONSISTENT_POS_MODE', 'data': None}
+2026-03-20 19:31:38 | WARNING | oi_screener | [LTCUSDT] Ошибка выставления: 20004 - TE_ERR_INCONSISTENT_POS_MODE
+2026-03-20 19:31:39 | INFO | oi_screener | Получен сигнал отмены. Запускаем процедуру остановки...
+2026-03-20 19:31:39 | INFO | oi_screener | Остановка скринера...
