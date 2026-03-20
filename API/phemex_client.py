@@ -106,6 +106,18 @@ class PhemexPrivateClient:
             print(f"[DEBUG] Парсинг цен не дал результатов! Символы не найдены. Сырой ответ (первые 500 символов): {str(data)[:500]}")
             
         return res
+    
+    async def set_leverage(self, symbol: str, pos_side: str, leverage: int) -> Dict[str, Any]:
+        """
+        Устанавливает плечо.
+        leverage = 0 включает Cross Margin.
+        """
+        body = {
+            "symbol": symbol,
+            "posSide": pos_side,
+            "leverageRr": str(leverage)
+        }
+        return await self._request("PUT", "/g-positions/leverage", body=body)
 
     async def place_order(self, symbol: str, side: str, qty: float, price: float, pos_side: str) -> Dict[str, Any]:
         from utils import float_to_str
