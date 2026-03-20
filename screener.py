@@ -1,5 +1,6 @@
 import asyncio
 from datetime import datetime
+import os
 from typing import Dict, Optional
 
 import aiohttp
@@ -11,6 +12,11 @@ from API.phemex_client import PhemexPrivateClient
 from c_log import UnifiedLogger
 from consts import TIME_ZONE
 from utils import round_step, async_append_to_json
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 TZ = pytz.timezone(TIME_ZONE)
 ERRORS_FILE = "oi_errors.json"
@@ -35,8 +41,8 @@ class OpenInterestScreener:
         self.iteration_interval = self.config.get("iteration_interval", 600)
         self.blacklist = set(self.config.get("black_list", []))
         
-        self.api_key = self.config.get("api_key", "")
-        self.api_secret = self.config.get("api_secret", "")
+        self.api_key = os.getenv("api_key") or ""
+        self.api_secret = os.getenv("api_secret") or ""
         
         self.prices: Dict[str, float] = {}
         self.symbols_api = PhemexSymbols()
